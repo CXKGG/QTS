@@ -1,0 +1,11 @@
+<Project>
+  <!-- Build artifacts live under the workspace root because the project subfolder's
+       inherited Windows integrity label blocks sandboxed build output there.
+       This is transparent to normal dotnet build/run commands. -->
+  <PropertyGroup>
+    <QtsBuildRoot>$(MSBuildThisFileDirectory)build-tmp\</QtsBuildRoot>
+    <BaseIntermediateOutputPath>$(QtsBuildRoot)obj\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(QtsBuildRoot)bin\</BaseOutputPath>
+    <DefaultItemExcludes>$(DefaultItemExcludes);obj\**;bin\**;build-tmp\**</DefaultItemExcludes>
+  </PropertyGroup>
+</Project>

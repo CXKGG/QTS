@@ -1,0 +1,20 @@
+# build outputs
+build-tmp/
+**/bin/
+**/obj/
+.vs/
+
+# frontend
+web/node_modules/
+web/.npm-cache/
+web/dist/
+
+# runtime secrets / data protection keys
+App_Data/keys/
+*.pfx
+
+# local test artifacts
+tools/
+tmp-ui/
+*.log
+write-test-*.txt
